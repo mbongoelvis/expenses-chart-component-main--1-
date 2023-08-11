@@ -2,42 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
 </head>
-<body>
-
-  My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+<body class="bg-rose-100">
+  <div class="container w-full h-screen flex items-center justify-center px-3">
+    <div class="main min-w-[25rem] min-h-[20rem] flex flex-col gap-2 md:ml-[10rem]">
+      <div class="w-full bg-red-500 text-white flex items-center justify-between rounded-lg px-3 py-5">
+        <!-- top section -->
+        <div>
+          <p>My balance</p>
+          <h1 class="text-xl font-bold">$921.48</h1>
+        </div>
+        <div>
+          <img src="./images/logo.svg">
+        </div>
+      </div>
+      <!-- bottom section -->
+      <div class="bg-white h-full w-full rounded-lg p-3">
+        <p class="font-bold text-3xl text-zinc-600">Spending-Last 7 days</p>
+        <!-- chart -->
+        <div class="grid grid-cols-7 justify-between h-[18rem] items-end border-b pb-5 gap-3">
+          <div class="flex flex-col items-center cursor-pointer group">
+            <p class="px-1 opacity-0 py-2 bg-stone-800 transition rounded mb-1 group-hover:opacity-100 text-white font-bold">$17.45</p>
+            <div class="w-full h-[5rem] bg-red-500 rounded"></div>
+            <p class="text-gray-400 flex flex-col gap-3">mon</p>
+          </div>
+          <div class="flex flex-col items-center cursor-pointer group">
+            <p class="px-1 opacity-0 py-2 bg-stone-800 transition rounded mb-1 group-hover:opacity-100 text-white font-bold">$34.91</p>
+            <div class="w-full h-[9rem] bg-red-500 rounded"></div>
+            <p class="text-gray-400">tue</p>
+          </div>
+          <div class="flex flex-col items-center cursor-pointer group">
+            <p class="px-1 opacity-0 py-2 bg-stone-800 transition rounded mb-1 group-hover:opacity-100 text-white font-bold">$52.36</p>
+            <div class="w-full h-[13rem] bg-indigo-300 rounded"></div>
+            <p class="text-gray-400">wed</p>
+          </div>
+          <div class="flex flex-col items-center cursor-pointer group">
+            <p class="px-1 opacity-0 py-2 bg-stone-800 transition rounded mb-1 group-hover:opacity-100 text-white font-bold">$31.07</p>
+            <div class="w-full h-[7rem] bg-red-500 rounded"></div>
+            <p class="text-gray-400">thus</p>
+          </div>
+          <div class="flex flex-col items-center cursor-pointer group">
+            <p class="px-1 opacity-0 py-2 bg-stone-800 transition rounded mb-1 group-hover:opacity-100 text-white font-bold">$23.39</p>
+            <div class="w-full h-[4.5rem] bg-red-500 rounded"></div>
+            <p class="text-gray-400">fri</p>
+          </div>
+          <div class="flex flex-col items-center cursor-pointer group">
+            <p class="px-1 opacity-0 py-2 bg-stone-800 transition rounded mb-1 group-hover:opacity-100 text-white font-bold">$43.28</p>
+            <div class="w-full h-[10rem] bg-red-500 rounded"></div>
+            <p class="text-gray-400">sat</p>
+          </div>
+          <div class="flex flex-col items-center cursor-pointer relative group">
+            <p class="px-1 opacity-0 py-2 bg-stone-800 transition rounded mb-1 group-hover:opacity-100 text-white font-bold">$25.48</p>
+            <div class="w-full h-[6rem] bg-red-500 rounded"></div>
+            <p class="text-gray-400">sun</p>
+          </div>
+        </div>
+        <!-- total this month section -->
+        <div class="mt-6 flex justify-between">
+          <div>
+            <p class="text-zinc-400">Total this month</p>
+            <h1 class="text-2xl font-bold">$478.33</h1>
+          </div>
+          <div class="mt-2">
+            <p class="text-end font-bold">+2.4%</p>
+            <p class="text-zinc-400">from last month</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 </body>
 </html>
